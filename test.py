@@ -18,10 +18,14 @@ def main():
     conn.get(req, qs)
     print( conn.get_dumps() )
 
+    req = 'Locations'
+    qs = {'select': '@iot.id,location'}
+    conn.get(req, qs)
+    print( conn.get_dumps() )
+
     req = 'Things(3)'
     conn.get(req)
     print( conn.get_dumps() )
-
 
 if __name__ == '__main__':
     main()
